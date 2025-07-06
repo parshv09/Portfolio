@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parshv Athane | Backend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800/90 backdrop-blur-md shadow-lg z-50 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">Parshv Athane</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white">Projects</a>
+                    <a href="#testimonials" class="nav-link text-gray-300 hover:text-white">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition">
+                        <i class="fas fa-bars text-xl text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 py-4 px-6 border-t border-gray-700">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-300 hover:text-white transition">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-white transition">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-white transition">Projects</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-white transition">Testimonials</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 hero-gradient relative overflow-hidden">
+        <!-- Floating elements -->
+        <div class="absolute top-20 left-20 w-16 h-16 rounded-full bg-purple-500/20 backdrop-blur-sm floating-element"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-24 h-24 rounded-lg bg-indigo-500/20 backdrop-blur-sm rotate-45 floating-element"></div>
+        <div class="absolute top-1/3 right-20 w-20 h-20 rounded-full bg-purple-500/15 backdrop-blur-sm floating-element"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="animate-fadeIn">
+                    <div class="mb-6 inline-flex items-center px-4 py-2 rounded-full bg-gray-800/30 backdrop-blur-sm border border-gray-700">
+                        <span class="w-3 h-3 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>
+                        <span class="text-sm font-mono">Available for opportunities</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-300">Parshv Athane</span>
+                        <span class="block text-3xl md:text-4xl text-gray-300 mt-4">Backend Developer</span>
+                    </h1>
+                    
+                    <p class="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed">
+                       I’m a backend/full-stack developer focused on creating useful and user-friendly solutions.
+Always curious, always improving.
+
+
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-3 rounded-lg font-medium bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Let's Connect
+                        </a>
+                        <a href="#projects" class="px-8 py-3 rounded-lg font-medium border-2 border-purple-400/30 text-white hover:border-purple-400/60 hover:bg-gray-800/30 transition-all duration-300 backdrop-blur-sm">
+                            View My Work
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="relative w-full max-w-md mx-auto">
+                        <!-- Main avatar container -->
+                        <div class="relative z-10 w-72 h-72 md:w-80 md:h-80 rounded-2xl bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500">
+                            <!-- Replace with your image -->
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-500">
+                                <img class="fas fa-user-astronaut text-9xl animate-float" alt="Image" src="https://github.com/user-attachments/assets/070c9c17-7c85-470e-885f-379979538198" ></img>
+                            </div>
+                            
+                            <!-- Floating tech icons around avatar -->
+                            <div class="absolute -top-6 -left-6 w-16 h-16 rounded-full bg-purple-500/30 backdrop-blur-sm flex items-center justify-center text-purple-300 animate-float" style="animation-delay: 0.5s;">
+                                <i class="fab fa-python text-3xl"></i>
+                            </div>
+                            <div class="absolute -bottom-6 -right-6 w-16 h-16 rounded-full bg-indigo-500/30 backdrop-blur-sm flex items-center justify-center text-indigo-300 animate-float" style="animation-delay: 1s;">
+                                <i class="fas fa-database text-3xl"></i>
+                            </div>
+                            <div class="absolute top-1/4 -right-8 w-14 h-14 rounded-full bg-purple-500/25 backdrop-blur-sm flex items-center justify-center text-purple-300 animate-float" style="animation-delay: 1.5s;">
+                                <i class="fab fa-aws text-2xl"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Animated stats cards -->
+                        <div class="absolute -bottom-8 -left-8 bg-gray-800/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-700/50 transform hover:scale-105 transition-all duration-300 animate-fadeIn z-20" style="animation-delay: 0.3s;">
+                            <div class="flex items-center">
+                                <div class="bg-purple-500/10 p-2 rounded-lg mr-3">
+                                    <i class="fas fa-code text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Projects</p>
+                                    <p class="text-xl font-bold text-white">5+</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="w-12 h-16 rounded-full border-2 border-purple-400/30 flex items-center justify-center text-purple-400 hover:text-white hover:border-purple-400 transition-all duration-300">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 rounded-full bg-gray-700 text-purple-400 text-sm font-medium mb-4 animate-fadeIn">ABOUT ME</span>
+                <h2 class="text-4xl font-bold mb-6 animate-fadeIn">Crafting Digital Backbones</h2>
+                <p class="max-w-2xl mx-auto text-gray-400 animate-fadeIn">I specialize in building the unseen architecture that powers modern web applications.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+     <div class="animate-fadeIn delay-100">
+    <div class="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 shadow-2xl hover:shadow-purple-500/10 hover:border-purple-400/30 transition-all duration-500 transform hover:-translate-y-1">
+        <!-- Header with animated icon -->
+        <div class="flex items-center mb-6">
+            <div class="mr-4 p-3 rounded-full bg-gradient-to-br from-purple-500/20 to-indigo-500/20 text-purple-400 animate-pulse">
+                <i class="fas fa-user-astronaut text-2xl"></i>
+            </div>
+            <h3 class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">Who I Am</h3>
+        </div>
+
+        <!-- Content with animated list items -->
+        <div class="space-y-6">
+            <div class="flex items-start group">
+                <div class="mr-4 mt-1 text-purple-400 group-hover:text-purple-300 transition-colors">
+                    <i class="fas fa-code text-lg"></i>
+                </div>
+                <p class="text-gray-300 group-hover:text-white transition-colors">
+                    A passionate and curious backend developer with a strong foundation in computer science. I specialize in building practical and efficient web solutions using:
+                </p>
+            </div>
+
+            <!-- Tech stack visualization -->
+            <div class="ml-10 mb-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div class="flex items-center px-4 py-2 bg-gray-700/50 rounded-lg border border-gray-600/30 hover:border-purple-400/50 transition-colors">
+                    <i class="fab fa-python text-purple-400 mr-2"></i>
+                    <span class="text-gray-300">Python</span>
+                </div>
+                <div class="flex items-center px-4 py-2 bg-gray-700/50 rounded-lg border border-gray-600/30 hover:border-purple-400/50 transition-colors">
+                    <i class="fas fa-fire text-orange-400 mr-2"></i>
+                    <span class="text-gray-300">Flask</span>
+                </div>
+                <div class="flex items-center px-4 py-2 bg-gray-700/50 rounded-lg border border-gray-600/30 hover:border-purple-400/50 transition-colors">
+                    <i class="fab fa-python text-emerald-400 mr-2"></i>
+                    <span class="text-gray-300">Django</span>
+                </div>
+                <div class="flex items-center px-4 py-2 bg-gray-700/50 rounded-lg border border-gray-600/30 hover:border-purple-400/50 transition-colors">
+                    <i class="fas fa-database text-blue-400 mr-2"></i>
+                    <span class="text-gray-300">PostgreSQL</span>
+                </div>
+                <div class="flex items-center px-4 py-2 bg-gray-700/50 rounded-lg border border-gray-600/30 hover:border-purple-400/50 transition-colors">
+                    <i class="fas fa-database text-yellow-400 mr-2"></i>
+                    <span class="text-gray-300">MySQL</span>
+                </div>
+                <div class="flex items-center px-4 py-2 bg-gray-700/50 rounded-lg border border-gray-600/30 hover:border-purple-400/50 transition-colors">
+                    <i class="fas fa-server text-green-400 mr-2"></i>
+                    <span class="text-gray-300">SQLite</span>
+                </div>
+            </div>
+
+            <!-- Project highlights -->
+            <div class="flex items-start group">
+                <div class="mr-4 mt-1 text-purple-400 group-hover:text-purple-300 transition-colors">
+                    <i class="fas fa-project-diagram text-lg"></i>
+                </div>
+                <div>
+                    <p class="text-gray-300 group-hover:text-white transition-colors mb-4">
+                        I've worked on impactful projects including:
+                    </p>
+                    <ul class="space-y-4 ml-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-car-side text-purple-400 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-white">Driver Drowsiness Detection System</h4>
+                                <p class="text-gray-400 text-sm">Computer vision solution for road safety</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-utensils text-purple-400 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-white">Food Waste Reducer Platform</h4>
+                                <p class="text-gray-400 text-sm">Recipe recommendations based on available ingredients</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Current focus -->
+            <div class="flex items-start group">
+                <div class="mr-4 mt-1 text-purple-400 group-hover:text-purple-300 transition-colors">
+                    <i class="fas fa-rocket text-lg"></i>
+                </div>
+                <p class="text-gray-300 group-hover:text-white transition-colors">
+                    I enjoy solving real problems through code, collaborating with teams, and learning new technologies. Currently expanding my skills in full-stack development and open to opportunities where I can grow while contributing to impactful solutions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Social links with hover animations -->
+        <div class="flex space-x-6 mt-8">
+            <a href="#" class="text-gray-400 hover:text-purple-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110">
+                <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-sky-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110">
+                <i class="fab fa-twitter text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-orange-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110">
+                <i class="fab fa-stack-overflow text-2xl"></i>
+            </a>
+        </div>
+    </div>
+</div>
+                
+                <div class="animate-fadeIn delay-200">
+                    <div class="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 shadow-2xl hover:shadow-purple-500/10 hover:border-purple-400/30 transition-all duration-500 transform hover:-translate-y-1">
+                    <div class="relative">
+                        <div class="space-y-8">
+                            <div class="flex items-center mb-8">
+                                <div class="mr-4 p-3 rounded-full bg-purple-500/10 text-purple-400">
+                                    <i class="fas fa-graduation-cap text-2xl"></i>
+                                </div>
+                                <h2 class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">Education Journey</h2>
+                            </div>
+                            
+                            <!-- Education Item 1 -->
+                            <div class="relative pl-12 pb-10 border-l-2 border-purple-400/30 group">
+                                <div class="absolute left-0 top-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 transform -translate-x-1/2 flex items-center justify-center shadow-lg group-hover:scale-125 transition-transform duration-300">
+                                    <i class="fas fa-university text-xs text-white"></i>
+                                </div>
+                                <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/30 shadow-lg hover:border-purple-400/50 transition-all duration-300">
+                                    <div class="flex items-start">
+                                        <div class="mr-4 mt-1 text-purple-400">
+                                             <i class="fas fa-university text-3xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-white">DKTE's Textile and Engineering Institute, Ichalkaranji</h4>
+                                            <p class="text-sm text-purple-400 mb-3 flex items-center">
+                                                <i class="far fa-calendar-alt mr-2"></i> 2024 - Present
+                                            </p>
+                                            <p class="text-gray-300">
+                                                <i class="fas fa-certificate text-purple-400 mr-2"></i> BTech in Computer Science and Engineering
+                                            </p>
+                                            <div class="mt-4 flex flex-wrap gap-2">
+                                                <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">Data Structures</span>
+                                                <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">Algorithms</span>
+                                                <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">Web Development</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Education Item 2 -->
+                            <div class="relative pl-12 pb-10 border-l-2 border-purple-400/30 group">
+                                <div class="absolute left-0 top-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 transform -translate-x-1/2 flex items-center justify-center shadow-lg group-hover:scale-125 transition-transform duration-300">
+                                    <i class="fas fa-graduation-cap text-xs text-white"></i>
+                                </div>
+                                <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/30 shadow-lg hover:border-purple-400/50 transition-all duration-300">
+                                    <div class="flex items-start">
+                                        <div class="mr-4 mt-1 text-purple-400">
+                                           <i class="fas fa-graduation-cap text-3xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-white">DKTE's Yashwantrao Chavan Polytechnic, Ichalkaranji</h4>
+                                            <p class="text-sm text-purple-400 mb-3 flex items-center">
+                                                <i class="far fa-calendar-alt mr-2"></i> 2021 - 2023
+                                            </p>
+                                            <p class="text-gray-300">
+                                                <i class="fas fa-certificate text-purple-400 mr-2"></i> Diploma in Computer Science and Engineering
+                                            </p>
+                                            <div class="mt-4 flex flex-wrap gap-2">
+                                                <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">Programming</span>
+                                                <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">Database Systems</span>
+                                                <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">Networking</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 rounded-full bg-gray-800 text-purple-400 text-sm font-medium mb-4 animate-fadeIn">MY SKILLS</span>
+                <h2 class="text-4xl font-bold mb-6 animate-fadeIn">Technical Expertise</h2>
+                <p class="max-w-2xl mx-auto text-gray-400 animate-fadeIn">The tools and technologies I use to build exceptional backend systems.</p>
+            </div>
+            
+           
+            <!-- Tech Stack Icons -->
+            <div class="mt-20 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8">
+                <!-- Python -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fab fa-python text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">Python</span>
+                </div>
+                
+                <!-- Django -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fas fa-code text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">Django</span>
+                </div>
+                
+                <!-- Flask -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fas fa-flask text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">Flask</span>
+                </div>
+                
+                <!-- Java -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fab fa-java text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">Java</span>
+                </div>
+                
+                <!-- C/C++ -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fas fa-file-code text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">C/C++</span>
+                </div>
+                
+                <!-- MySQL -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fas fa-database text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">MySQL</span>
+                </div>
+                
+                <!-- PostgreSQL -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fas fa-database text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">PostgreSQL</span>
+                </div>
+                
+                <!-- Git -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fab fa-git-alt text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">Git</span>
+                </div>
+                
+                <!-- GitHub -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fab fa-github text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">GitHub</span>
+                </div>
+                
+                <!-- Android -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fab fa-android text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">Android</span>
+                </div>
+                
+                <!-- HTML -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fab fa-html5 text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">HTML</span>
+                </div>
+                
+                <!-- CSS -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fab fa-css3-alt text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">CSS</span>
+                </div>
+                
+                <!-- JavaScript -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fab fa-js text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">JavaScript</span>
+                </div>
+                
+                <!-- PHP -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fab fa-php text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">PHP</span>
+                </div>
+                
+                <!-- AI/ML -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/40 hover:-translate-y-1">
+                    <i class="fas fa-brain text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">AI/ML</span>
+                </div>
+                
+                <!-- TensorFlow -->
+                <div class="flex flex-col items-center p-6 bg-gray-800/50 rounded-xl transition-all duration-300 hover:bg-purple-900/30 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <i class="fas fa-project-diagram text-4xl text-purple-400 mb-3"></i>
+                    <span class="text-gray-300">OpenCV</span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 rounded-full bg-gray-700 text-purple-400 text-sm font-medium mb-4 animate-fadeIn">MY WORK</span>
+                <h2 class="text-4xl font-bold mb-6 animate-fadeIn">Featured Projects</h2>
+                <p class="max-w-2xl mx-auto text-gray-400 animate-fadeIn">Some of my recent work that showcases my technical capabilities.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 - AI Civic Policy -->
+                <div class="project-card bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 flex items-center justify-center relative">
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1562601579-599dec564e06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center opacity-20"></div>                          <i class="fas fa-landmark text-6xl text-purple-400 relative z-10"></i> <!-- Changed to government building icon -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">AI powered Civic Policy Feedback Portal</h3>
+                        <p class="text-gray-400 mb-4">
+                            Real-time analytics platform processing millions of events daily with Django and ClickHouse.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">Django Rest Framework</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">React JS</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-purple-500/10 text-purple-400">PostgreSQL</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group">
+                            View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - Food Waste Reducer -->
+                <div class="project-card bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-br from-blue-500/20 to-teal-500/20 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80')] bg-cover bg-center opacity-20"></div>                        <i class="fas fa-utensils text-6xl text-blue-400 relative z-10"></i> <!-- Changed to food utensils icon -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">Food Waste Reducer with Recipe Suggestions</h3>
+                        <p class="text-gray-400 mb-4">
+                            High-performance e-commerce backend handling 10k+ RPM with Flask and PostgreSQL.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full text-xs bg-blue-500/10 text-blue-400">Django</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-blue-500/10 text-blue-400">MySQL</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-blue-500/10 text-blue-400">HTML CSS JS</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group">
+                            View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 - Driver Drowsiness -->
+                <div class="project-card bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20 hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1502224562085-639556652f33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80')] bg-cover bg-center opacity-20"></div>
+                        <i class="fas fa-car text-6xl text-green-400 relative z-10"></i> <!-- Changed to car icon -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">Driver Drowsiness Detection System</h3>
+                        <p class="text-gray-400 mb-4">
+                            Real-time IoT data processing system with FastAPI and TimescaleDB.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full text-xs bg-green-500/10 text-green-400">Flask</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-green-500/10 text-green-400">OpenCV</span>
+                            <span class="px-3 py-1 rounded-full text-xs bg-green-500/10 text-green-400">SQLite</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-green-400 hover:text-green-300 font-medium group">
+                            View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="mt-12 text-center">
+    <a href="#" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full text-white font-medium hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+        View All Projects
+        <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+    </a>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 rounded-full bg-gray-800 text-purple-400 text-sm font-medium mb-4 animate-fadeIn">TESTIMONIALS</span>
+                <h2 class="text-4xl font-bold mb-6 animate-fadeIn">What Clients Say</h2>
+                <p class="max-w-2xl mx-auto text-gray-400 animate-fadeIn">Hear from people I've worked with throughout my career.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card animate-fadeIn delay-100">
+                    <div class="testimonial-inner h-full bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                            <div>
+                                <h4 class="font-semibold text-white">Sarah Johnson</h4>
+                                <p class="text-sm text-purple-400">CTO at TechNova</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 italic mb-6">
+                            "Alex transformed our backend infrastructure, improving performance by 300%. His Django expertise is unmatched."
+                        </p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card animate-fadeIn delay-200">
+                    <div class="testimonial-inner h-full bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                            <div>
+                                <h4 class="font-semibold text-white">Michael Chen</h4>
+                                <p class="text-sm text-purple-400">Lead Developer at DataCraft</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 italic mb-6">
+                            "The database optimizations Alex implemented saved us thousands in server costs. Truly a backend wizard."
+                        </p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card animate-fadeIn delay-300">
+                    <div class="testimonial-inner h-full bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
+                            <div>
+                                <h4 class="font-semibold text-white">Emma Rodriguez</h4>
+                                <p class="text-sm text-purple-400">Product Manager at StartupX</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 italic mb-6">
+                            "Alex delivered our API infrastructure ahead of schedule with perfect documentation. Highly recommend!"
+                        </p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 rounded-full bg-gray-700 text-purple-400 text-sm font-medium mb-4 animate-fadeIn">GET IN TOUCH</span>
+                <h2 class="text-4xl font-bold mb-6 animate-fadeIn">Let's Work Together</h2>
+                <p class="max-w-2xl mx-auto text-gray-400 animate-fadeIn">Have a project in mind or want to discuss opportunities? I'd love to hear from you.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="animate-fadeIn delay-100">
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-purple-500/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Email</h4>
+                                <p class="text-gray-400">parshvathane02@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-500/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone-alt text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Phone</h4>
+                                <p class="text-gray-400">+91 9922803115</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-500/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Location</h4>
+                                <p class="text-gray-400">Kolhapur,Maharashtra, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <h4 class="font-semibold text-white mb-4">Connect with me</h4>
+                            <div class="flex space-x-6">
+                                <a href="#" class="text-gray-400 hover:text-purple-400 transition text-2xl">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-blue-400 transition text-2xl">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-sky-400 transition text-2xl">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-orange-400 transition text-2xl">
+                                    <i class="fab fa-stack-overflow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-fadeIn delay-200">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" class="form-input w-full px-4 py-3 rounded-lg border border-gray-600 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/30 outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+                            <input type="email" id="email" class="form-input w-full px-4 py-3 rounded-lg border border-gray-600 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/30 outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" class="form-input w-full px-4 py-3 rounded-lg border border-gray-600 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/30 outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                            <textarea id="message" rows="5" class="form-input w-full px-4 py-3 rounded-lg border border-gray-600 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/30 outline-none transition"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 rounded-lg font-medium bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">Parshv Athane </a>
+                    <p class="text-gray-500 mt-2">© 2025 Parshv Athane. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-purple-400 transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-sky-400 transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-orange-400 transition">
+                        <i class="fab fa-stack-overflow text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
