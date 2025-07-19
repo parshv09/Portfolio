@@ -84,12 +84,11 @@
             cursor: grab;
         }
         .scrollbar-hide {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;     /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
         }
-
         .scrollbar-hide::-webkit-scrollbar {
-        display: none;             /* Chrome, Safari, and Opera */
+            display: none;  /* Chrome, Safari, and Opera */
         }
     </style>
 </head>
@@ -127,10 +126,10 @@
     <main class="max-w-7xl mx-auto px-6 md:px-10">
         <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center py-24 md:py-0">
-            <div class="grid md:grid-cols-2 gap-10 items-center w-full">
-                <div class="fade-in max-w-4xl text-center md:text-left">
+            <div class="grid md:grid-cols-2 gap-10 items-center w-full h-[80vh] md:h-auto">
+                <div class="fade-in max-w-4xl text-center md:text-left z-10 col-start-1 row-start-1">
                     <p class="text-lg highlight-text mb-4">Hi, my name is</p>
-                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold text-gray-100">Parshv Athane</h1>
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold text-gray-100">Parshv Athane.</h1>
                     <h2 class="text-3xl sm:text-5xl md:text-4xl font-bold text-slate-400 mt-2">I build things for the web.</h2>
                     <p class="mt-6 max-w-xl text-slate-400 mx-auto md:mx-0">
                         "I am a passionate and curious developer who loves building impactful, real-world projects. I enjoy turning ideas into digital solutions and continuously learning new technologies along the way."
@@ -140,7 +139,7 @@
                         <a href="#contact" class="px-6 py-3 bg-cyan-400 text-slate-900 font-semibold rounded-md hover:bg-cyan-300 transition-colors">Contact Me</a>
                     </div>
                 </div>
-                <div id="hero-3d-container" class="w-full h-72 md:h-[500px]">
+                <div id="hero-3d-container" class="w-full h-full col-start-1 row-start-1 md:col-start-2 md:h-[500px] opacity-40 md:opacity-100">
                     <!-- 3D Canvas will be appended here by three.js -->
                 </div>
             </div>
@@ -148,7 +147,7 @@
 
         <!-- About Me Section -->
         <section id="about" class="py-24">
-            <h2 class="section-heading fade-in "><span class="inline-block border-b-4 border-[#64ffda] pb-1">About Me</span></h2>
+            <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">About Me</span></h2>
             <div class="fade-in grid md:grid-cols-5 gap-10">
                 <div class="md:col-span-3 text-slate-400 space-y-4 text-lg">
                     <p>Hello! I'm a passionate developer with a knack for creating efficient and scalable web applications. My journey into the world of programming started with a simple "Hello World", and since then, I've been captivated by the power of code to bring ideas to life.</p>
@@ -166,483 +165,478 @@
                         <img src="parshv.jpg" alt="Parshv Athane" class="relative w-full h-full object-cover rounded-md">
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-24">
-            <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">My Skills</span></h2>
-            <div class="fade-in grid md:grid-cols-2 gap-10">
-                <div class="bg-slate-800/50 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-cyan-400/5">
-                    <h3 class="text-xl font-semibold text-gray-200 mb-4">Programming Languages</h3>
-                    <div class="space-y-4">
-                        <div class="skill-item" data-percent="65">
-                            <p class="flex justify-between mb-1"><span>Python</span><span>65%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+            <!-- Skills Section -->
+            <section id="skills" class="py-24">
+                <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">My Skills</span></h2>
+                <div class="fade-in grid md:grid-cols-2 gap-10">
+                    <div class="bg-slate-800/50 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-cyan-400/5">
+                        <h3 class="text-xl font-semibold text-gray-200 mb-4">Programming Languages</h3>
+                        <div class="space-y-4">
+                            <div class="skill-item" data-percent="65">
+                                <p class="flex justify-between mb-1"><span>Python</span><span>65%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="63">
+                                <p class="flex justify-between mb-1"><span>Java</span><span>63%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="60">
+                                <p class="flex justify-between mb-1"><span>C</span><span>60%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="60">
+                                <p class="flex justify-between mb-1"><span>C++</span><span>60%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="45">
+                                <p class="flex justify-between mb-1"><span>PHP</span><span>45%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
                         </div>
-                        <div class="skill-item" data-percent="63">
-                            <p class="flex justify-between mb-1"><span>Java</span><span>63%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-cyan-400/5">
+                        <h3 class="text-xl font-semibold text-gray-200 mb-4">Web Technologies & Frameworks</h3>
+                        <div class="space-y-4">
+                            <div class="skill-item" data-percent="65">
+                                <p class="flex justify-between mb-1"><span>HTML / CSS</span><span>65%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="40">
+                                <p class="flex justify-between mb-1"><span>JavaScript</span><span>40%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="65">
+                                <p class="flex justify-between mb-1"><span>Django</span><span>65%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="55">
+                                <p class="flex justify-between mb-1"><span>Flask</span><span>55%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="30">
+                                <p class="flex justify-between mb-1"><span>ReactJS</span><span>30%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
                         </div>
-                        <div class="skill-item" data-percent="60">
-                            <p class="flex justify-between mb-1"><span>C</span><span>60%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-cyan-400/5">
+                        <h3 class="text-xl font-semibold text-gray-200 mb-4">Databases</h3>
+                        <div class="space-y-4">
+                            <div class="skill-item" data-percent="60">
+                                <p class="flex justify-between mb-1"><span>MySQL</span><span>60%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="30">
+                                <p class="flex justify-between mb-1"><span>PostgreSQL</span><span>30%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
+                            <div class="skill-item" data-percent="30">
+                                <p class="flex justify-between mb-1"><span>Oracle</span><span>30%</span></p>
+                                <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                            </div>
                         </div>
-                        <div class="skill-item" data-percent="60">
-                            <p class="flex justify-between mb-1"><span>C++</span><span>60%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
-                        </div>
-                        <div class="skill-item" data-percent="45">
-                            <p class="flex justify-between mb-1"><span>PHP</span><span>45%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
+                    </div>
+                    <div class="md:col-span-2 bg-slate-800/50 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-cyan-400/5">
+                        <h3 class="text-xl font-semibold text-gray-200 mb-4">Tools & Technologies</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-slate-700 px-3 py-1 rounded-md">Git & GitHub</span>
+                            <span class="bg-slate-700 px-3 py-1 rounded-md">AIML</span>
+                            <span class="bg-slate-700 px-3 py-1 rounded-md">REST APIs</span>
+                            <span class="bg-slate-700 px-3 py-1 rounded-md">Postman</span>
                         </div>
                     </div>
                 </div>
-                <div class="bg-slate-800/50 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-cyan-400/5">
-                    <h3 class="text-xl font-semibold text-gray-200 mb-4">Web Technologies & Frameworks</h3>
-                    <div class="space-y-4">
-                        <div class="skill-item" data-percent="65">
-                            <p class="flex justify-between mb-1"><span>HTML / CSS</span><span>65%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
-                        </div>
-                        <div class="skill-item" data-percent="40">
-                            <p class="flex justify-between mb-1"><span>JavaScript</span><span>40%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
-                        </div>
-                        <div class="skill-item" data-percent="65">
-                            <p class="flex justify-between mb-1"><span>Django</span><span>65%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
-                        </div>
-                        <div class="skill-item" data-percent="55">
-                            <p class="flex justify-between mb-1"><span>Flask</span><span>55%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
-                        </div>
-                        <div class="skill-item" data-percent="30">
-                            <p class="flex justify-between mb-1"><span>ReactJS</span><span>30%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
-                        </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="py-24">
+                <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">Education</span></h2>
+                <div class="fade-in relative border-l-2 border-slate-700 pl-8 space-y-12">
+                    <!-- Timeline Item 1 -->
+                    <div class="relative p-4 rounded-md transition-all duration-300 hover:bg-slate-800/50">
+                        <div class="absolute -left-10 top-5 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900"></div>
+                        <p class="text-sm highlight-text">2024 - present</p>
+                        <h3 class="text-xl font-semibold text-gray-100 mt-1">Bachelor of Technology (B.Tech) in Computer Science</h3>
+                        <p class="text-slate-400">DKTE's Textile and Engineering Institute, Ichalkaranji</p>
+                        <p class="text-slate-400">CGPA: 8.6/10</p>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="relative p-4 rounded-md transition-all duration-300 hover:bg-slate-800/50">
+                        <div class="absolute -left-10 top-5 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900"></div>
+                        <p class="text-sm highlight-text">2021 - 2023</p>
+                        <h3 class="text-xl font-semibold text-gray-100 mt-1">Diploma in Computer Science</h3>
+                        <p class="text-slate-400">DKTE's Yashwantrao Chavan Polytechnic, Ichalkaranji</p>
+                        <p class="text-slate-400">Aggregate: 88.62%</p>
+                    </div>
+                    <!-- Timeline Item 3 -->
+                    <div class="relative p-4 rounded-md transition-all duration-300 hover:bg-slate-800/50">
+                        <div class="absolute -left-10 top-5 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900"></div>
+                        <p class="text-sm highlight-text">2014 - 2020</p>
+                        <h3 class="text-xl font-semibold text-gray-100 mt-1">Secondary Education</h3>
+                        <p class="text-slate-400">Saraswati Highschool, Ichalkaranji</p>
+                        <p class="text-slate-400">Percentage (SSC): 88.20%</p>
                     </div>
                 </div>
-                <div class="bg-slate-800/50 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-cyan-400/5">
-                    <h3 class="text-xl font-semibold text-gray-200 mb-4">Databases</h3>
-                    <div class="space-y-4">
-                        <div class="skill-item" data-percent="60">
-                            <p class="flex justify-between mb-1"><span>MySQL</span><span>60%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
-                        </div>
-                        <div class="skill-item" data-percent="30">
-                            <p class="flex justify-between mb-1"><span>PostgreSQL</span><span>30%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
-                        </div>
-                        <div class="skill-item" data-percent="30">
-                            <p class="flex justify-between mb-1"><span>Oracle</span><span>30%</span></p>
-                            <div class="skill-bar w-full bg-slate-700 rounded-md h-2"><div class="skill-bar-inner"></div></div>
-                        </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="py-24">
+                <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">My Projects</span></h2>
+                <div id="project-grid" class="fade-in grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project cards will be injected here by JS -->
+                </div>
+            </section>
+
+            <!-- Reviews/Testimonials Section -->
+            <section id="reviews" class="py-24">
+                <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">Testimonials</span></h2>
+                <div class="fade-in max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-slate-800 rounded-lg p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-400/10">
+                        <img src="https://placehold.co/80x80/1e293b/ffffff?text=S" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Senior Developer">
+                        <p class="text-slate-300 my-4">"Working with Parshv was a fantastic experience. Their dedication to writing clean, efficient code is remarkable. A true team player with excellent problem-solving skills."</p>
+                        <h4 class="font-semibold text-gray-100 mt-6">Senior Developer</h4>
+                        <p class="text-sm text-slate-400">Lead at Tech Corp</p>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-slate-800 rounded-lg p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-400/10">
+                        <img src="https://placehold.co/80x80/1e293b/ffffff?text=P" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Professor">
+                        <p class="text-slate-300 my-4">"Parshv has a great grasp of backend concepts and was instrumental in our final year project. Always eager to learn and contribute."</p>
+                        <h4 class="font-semibold text-gray-100 mt-6">Professor Jane Doe</h4>
+                        <p class="text-sm text-slate-400">Computer Science Dept.</p>
                     </div>
                 </div>
-                <div class="md:col-span-2 bg-slate-800/50 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-cyan-400/5">
-                    <h3 class="text-xl font-semibold text-gray-200 mb-4">Tools & Technologies</h3>
-                    <div class="flex flex-wrap gap-4">
-                        <span class="bg-slate-700 px-3 py-1 rounded-md">Git & GitHub</span>
-                        <span class="bg-slate-700 px-3 py-1 rounded-md">AIML</span>
-                        <span class="bg-slate-700 px-3 py-1 rounded-md">REST APIs</span>
-                        <span class="bg-slate-700 px-3 py-1 rounded-md">Postman</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Education Section -->
-        <section id="education" class="py-24">
-            <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">Education</span></h2>
-            <div class="fade-in relative border-l-2 border-slate-700 pl-8 space-y-12">
-                <!-- Timeline Item 1 -->
-                <div class="relative p-4 rounded-md transition-all duration-300 hover:bg-slate-800/50">
-                    <div class="absolute -left-10 top-5 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900"></div>
-                    <p class="text-sm highlight-text">2024 - present</p>
-                    <h3 class="text-xl font-semibold text-gray-100 mt-1">Bachelor of Technology (B.Tech) in Computer Science</h3>
-                    <p class="text-slate-400">DKTE's Textile and Engineering Institute, Ichalkaranji</p>
-                    <p class="text-slate-400">CGPA: 8.6/10</p>
-                </div>
-                <!-- Timeline Item 2 -->
-                <div class="relative p-4 rounded-md transition-all duration-300 hover:bg-slate-800/50">
-                    <div class="absolute -left-10 top-5 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900"></div>
-                    <p class="text-sm highlight-text">2021 - 2023</p>
-                    <h3 class="text-xl font-semibold text-gray-100 mt-1">Diploma in Computer Science</h3>
-                    <p class="text-slate-400">DKTE's Yashwantrao Chavan Polytechnic, Ichalkaranji</p>
-                    <p class="text-slate-400">Aggregate: 88.62%</p>
-                </div>
-                 <!-- Timeline Item 3 -->
-                <div class="relative p-4 rounded-md transition-all duration-300 hover:bg-slate-800/50">
-                    <div class="absolute -left-10 top-5 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900"></div>
-                    <p class="text-sm highlight-text">2014 - 2020</p>
-                    <h3 class="text-xl font-semibold text-gray-100 mt-1">Secondary Education</h3>
-                    <p class="text-slate-400">Saraswati Highschool, Ichalkaranji</p>
-                    <p class="text-slate-400">Percentage (SSC): 88.20%</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-24">
-            <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">My Projects</span></h2>
-            <div id="project-grid" class="fade-in grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project cards will be injected here by JS -->
-            </div>
-        </section>
-
-        <!-- Reviews/Testimonials Section -->
-        <section id="reviews" class="py-24">
-            <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">Testimonials</span></h2>
-            <div class="fade-in max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Testimonial Card 1 -->
-                <div class="bg-slate-800 rounded-lg p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-400/10">
-                    <img src="https://placehold.co/80x80/1e293b/ffffff?text=S" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Senior Developer">
-                    <p class="text-slate-300 my-4">"Working with [Your Name] was a fantastic experience. Their dedication to writing clean, efficient code is remarkable. A true team player with excellent problem-solving skills."</p>
-                    <h4 class="font-semibold text-gray-100 mt-6">Senior Developer</h4>
-                    <p class="text-sm text-slate-400">Lead at Tech Corp</p>
-                </div>
-                 <!-- Testimonial Card 2 -->
-                <div class="bg-slate-800 rounded-lg p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-400/10">
-                    <img src="https://placehold.co/80x80/1e293b/ffffff?text=P" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Professor">
-                    <p class="text-slate-300 my-4">"[Your Name] has a great grasp of backend concepts and was instrumental in our final year project. Always eager to learn and contribute."</p>
-                    <h4 class="font-semibold text-gray-100 mt-6">Professor Jane Doe</h4>
-                    <p class="text-sm text-slate-400">Computer Science Dept.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-24 text-center">
-            <div class="fade-in max-w-3xl mx-auto">
-                <h2 class="text-2xl font-semibold highlight-text">What's Next?</h2>
-                <h3 class="text-4xl md:text-5xl font-bold text-gray-100 mt-2 mb-4">Get In Touch</h3>
-                <p class="text-slate-400 mb-8">My inbox is always open. Whether you have a question, a project proposal, or just want to say hi, I’ll get back to you!</p>
-                <form id="contact-form" class="space-y-4 text-left">
-                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full bg-slate-800 border border-slate-700 rounded-md p-3 focus:border-cyan-400 focus:outline-none transition-colors" required>
-                    <input type="email" id="email" name="email" placeholder="Your Email" class="w-full bg-slate-800 border border-slate-700 rounded-md p-3 focus:border-cyan-400 focus:outline-none transition-colors" required>
-                    <div>
-                        <label for="message" class="text-slate-300 sr-only">Your Message</label>
-                        <textarea name="message" id="message" rows="5" placeholder="Your Message" class="w-full bg-slate-800 border border-slate-700 rounded-md p-3 focus:border-cyan-400 focus:outline-none transition-colors" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full px-6 py-3 bg-cyan-400 text-slate-900 font-semibold rounded-md hover:bg-cyan-300 transition-colors">Send Message</button>
-                    <p id="form-status" class="text-sm text-center mt-4 h-4"></p>
-                </form>
-                 <div class="mt-12 pt-8 border-t border-slate-700">
+            <!-- Contact Section -->
+            <section id="contact" class="py-24 text-center">
+                <div class="fade-in max-w-3xl mx-auto">
+                    <h2 class="text-2xl font-semibold highlight-text">What's Next?</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold text-gray-100 mt-2 mb-4">Get In Touch</h3>
+                    <p class="text-slate-400 mb-8">My inbox is always open. Whether you have a question, a project proposal, or just want to say hi, I’ll get back to you!</p>
+                    <form id="contact-form" class="space-y-4 text-left">
+                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full bg-slate-800 border border-slate-700 rounded-md p-3 focus:border-cyan-400 focus:outline-none transition-colors" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" class="w-full bg-slate-800 border border-slate-700 rounded-md p-3 focus:border-cyan-400 focus:outline-none transition-colors" required>
+                        <div>
+                            <label for="message" class="text-slate-300 sr-only">Your Message</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Your Message" class="w-full bg-slate-800 border border-slate-700 rounded-md p-3 focus:border-cyan-400 focus:outline-none transition-colors" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-cyan-400 text-slate-900 font-semibold rounded-md hover:bg-cyan-300 transition-colors">Send Message</button>
+                        <p id="form-status" class="text-sm text-center mt-4 h-4"></p>
+                    </form>
+                    <div class="mt-12 pt-8 border-t border-slate-700">
                         <h4 class="text-lg font-semibold text-gray-200 mb-4">Or reach me directly at:</h4>
                         <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-                            <a href="mailto:parshvathan02e@email.com" class="flex items-center gap-2 text-slate-300 hover:text-cyan-300 transition-colors">
+                            <a href="mailto:parshvathane02@email.com" class="flex items-center gap-2 text-slate-300 hover:text-cyan-300 transition-colors">
                                 <i class="ri-mail-line text-xl"></i>
                                 <span>parshvathane02@email.com</span>
                             </a>
                             <a href="tel:+919922803115" class="flex items-center gap-2 text-slate-300 hover:text-cyan-300 transition-colors">
                                 <i class="ri-phone-line text-xl"></i>
-                                <span>+919922803115</span>
+                                <span>+91 9922803115</span>
                             </a>
-                            <div class="flex items-center gap-2 text-slate-300 hover:text-cyan-300 transition-colors">
+                            <div class="flex items-center gap-2 text-slate-300">
                                 <i class="ri-map-pin-line text-xl"></i>
                                 <span>Ichalkaranji, Maharashtra, India</span>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="py-8">
+            <div class="max-w-7xl mx-auto px-6 text-center text-slate-400">
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="https://github.com/parshv09" class="hover:text-cyan-300 transition-colors"><i class="ri-github-fill text-xl"></i></a>
+                    <a href="https://www.linkedin.com/in/parshv-athane-980982267/" class="hover:text-cyan-300 transition-colors"><i class="ri-linkedin-box-fill text-xl"></i></a>
+                    <a href="#" class="hover:text-cyan-300 transition-colors"><i class="ri-twitter-x-fill text-xl"></i></a>
+                </div>
+                <p class="text-sm">Designed & Built by Parshv Athane</p>
+                <p class="text-xs mt-1">&copy; 2025 All Rights Reserved.</p>
             </div>
-        </section>
-    </main>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="py-8">
-        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://github.com/parshv09" class="hover:text-cyan-300 transition-colors"><i class="ri-github-fill text-xl"></i></a>
-                <a href="https://www.linkedin.com/in/parshv-athane-980982267/" class="hover:text-cyan-300 transition-colors"><i class="ri-linkedin-box-fill text-xl"></i></a>
-                <a href="#" class="hover:text-cyan-300 transition-colors"><i class="ri-twitter-x-fill text-xl"></i></a>
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top" class="fixed bottom-5 right-5 bg-cyan-400/20 text-cyan-300 p-3 rounded-full shadow-lg hover:bg-cyan-400/40 transition-all duration-300 opacity-0 transform translate-y-4 pointer-events-none">
+            <i class="ri-arrow-up-s-line text-xl"></i>
+        </button>
+        
+        <!-- Project Modal -->
+        <div id="project-modal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 opacity-0 invisible">
+            <div id="modal-content" class="bg-slate-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative transform scale-95 transition-transform duration-300 scrollbar-hide">
+                <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="ri-close-line text-2xl"></i></button>
+                <img id="modal-image" src="" alt="Project Image" class="w-full h-64 object-cover rounded-md mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-white mb-2"></h3>
+                <div id="modal-tags" class="flex flex-wrap gap-2 mb-4"></div>
+                <p class="text-slate-300 font-semibold mb-2">Description</p>
+                <p id="modal-description" class="text-slate-400 mb-6 min-h-[100px] bg-slate-900/50 p-3 rounded-md"></p>
+                <div id="modal-links" class="flex gap-4"></div>
             </div>
-            <p class="text-sm">Designed & Built by Parshv Athane</p>
-            <p class="text-xs mt-1">&copy; 2025 All Rights Reserved.</p>
         </div>
-    </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="fixed bottom-5 right-5 bg-cyan-400/20 text-cyan-300 p-3 rounded-full shadow-lg hover:bg-cyan-400/40 transition-all duration-300 opacity-0 transform translate-y-4 pointer-events-none">
-        <i class="ri-arrow-up-s-line text-xl"></i>
-    </button>
-    
-    <!-- Project Modal -->
-    <div id="project-modal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 opacity-0 invisible">
-        <div id="modal-content" class="bg-slate-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative transform scale-95 transition-transform duration-300 scrollbar-hide">
-            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="ri-close-line text-2xl"></i></button>
-            <img id="modal-image" src="" alt="Project Image" class="w-full h-65 object-cover rounded-md mb-4">
-            <h3 id="modal-title" class="text-2xl font-bold text-white mb-2"></h3>
-            <div id="modal-tags" class="flex flex-wrap gap-2 mb-4"></div>
-            <p class="text-slate-300 font-semibold mb-2">Description</p>
-            <p id="modal-description" class="text-slate-400 mb-6 min-h-[100px] bg-slate-900/50 p-3 rounded-md"></p>
-            <div id="modal-links" class="flex gap-4"></div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- 3D Hero Animation ---
-            if (window.THREE) {
-                const container = document.getElementById('hero-3d-container');
-                if (container) {
-                    const scene = new THREE.Scene();
-                    const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-                    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-                    renderer.setSize(container.clientWidth, container.clientHeight);
-                    container.appendChild(renderer.domElement);
-
-                    const group = new THREE.Group();
-                    scene.add(group);
-
-                    const loader = new THREE.TextureLoader();
-                    const icons = [
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-                        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg'
-                    ];
-
-                    const radius = 2.5;
-                    const iconMeshes = [];
-
-                    icons.forEach((url, i) => {
-                        loader.load(url, (texture) => {
-                            const material = new THREE.MeshStandardMaterial({
-                                map: texture,
-                                transparent: true,
-                                roughness: 0.8,
-                                metalness: 0.1
-                            });
-                            const geometry = new THREE.PlaneGeometry(0.8, 0.8);
-                            const mesh = new THREE.Mesh(geometry, material);
-                            
-                            const phi = Math.acos(-1 + (2 * i) / (icons.length -1));
-                            const theta = Math.sqrt(icons.length * Math.PI) * phi;
-                            
-                            mesh.position.setFromSphericalCoords(radius, phi, theta);
-                            mesh.lookAt(camera.position);
-
-                            group.add(mesh);
-                            iconMeshes.push(mesh);
-                        });
-                    });
-
-                    // --- Lighting ---
-                    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
-                    scene.add(ambientLight);
-                    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-                    directionalLight.position.set(5, 5, 10);
-                    scene.add(directionalLight);
-                    
-                    camera.position.z = 6;
-
-                    // --- Animation & Interaction ---
-                    const raycaster = new THREE.Raycaster();
-                    const mouse = new THREE.Vector2();
-                    let intersected;
-
-                    function onMouseMove(event) {
-                        const rect = renderer.domElement.getBoundingClientRect();
-                        mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-                        mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-                    }
-                    
-                    window.addEventListener('mousemove', onMouseMove);
-
-                    function animate() {
-                        requestAnimationFrame(animate);
-                        
-                        group.rotation.y += 0.002;
-                        group.rotation.x += 0.001;
-
-                        // Raycasting for hover effect
-                        raycaster.setFromCamera(mouse, camera);
-                        const intersects = raycaster.intersectObjects(iconMeshes);
-
-                        iconMeshes.forEach(mesh => {
-                            mesh.scale.lerp(new THREE.Vector3(1, 1, 1), 0.1);
-                        });
-
-                        if (intersects.length > 0) {
-                            const firstIntersected = intersects[0].object;
-                            firstIntersected.scale.lerp(new THREE.Vector3(1.3, 1.3, 1.3), 0.1);
-                        }
-
-                        // Make icons always face the camera
-                        iconMeshes.forEach(mesh => {
-                            mesh.lookAt(camera.position);
-                        });
-
-                        renderer.render(scene, camera);
-                    }
-                    animate();
-
-                    window.addEventListener('resize', () => {
-                        camera.aspect = container.clientWidth / container.clientHeight;
-                        camera.updateProjectionMatrix();
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // --- 3D Hero Animation ---
+                if (window.THREE) {
+                    const container = document.getElementById('hero-3d-container');
+                    if (container) {
+                        const scene = new THREE.Scene();
+                        const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+                        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
                         renderer.setSize(container.clientWidth, container.clientHeight);
+                        container.appendChild(renderer.domElement);
+
+                        const group = new THREE.Group();
+                        scene.add(group);
+
+                        const loader = new THREE.TextureLoader();
+                        const icons = [
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+                           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg',
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg'
+                        ];
+
+                        const radius = 2.5;
+                        const iconMeshes = [];
+
+                        icons.forEach((url, i) => {
+                            loader.load(url, (texture) => {
+                                const material = new THREE.MeshStandardMaterial({
+                                    map: texture,
+                                    transparent: true,
+                                    roughness: 0.8,
+                                    metalness: 0.1
+                                });
+                                const geometry = new THREE.PlaneGeometry(0.8, 0.8);
+                                const mesh = new THREE.Mesh(geometry, material);
+                                
+                                const phi = Math.acos(-1 + (2 * i) / (icons.length -1));
+                                const theta = Math.sqrt(icons.length * Math.PI) * phi;
+                                
+                                mesh.position.setFromSphericalCoords(radius, phi, theta);
+                                mesh.lookAt(camera.position);
+
+                                group.add(mesh);
+                                iconMeshes.push(mesh);
+                            });
+                        });
+
+                        // --- Lighting ---
+                        const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+                        scene.add(ambientLight);
+                        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+                        directionalLight.position.set(5, 5, 10);
+                        scene.add(directionalLight);
+                        
+                        camera.position.z = 6;
+
+                        // --- Animation & Interaction ---
+                        const raycaster = new THREE.Raycaster();
+                        const mouse = new THREE.Vector2();
+                        let intersected;
+
+                        function onMouseMove(event) {
+                            const rect = renderer.domElement.getBoundingClientRect();
+                            mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+                            mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+                        }
+                        
+                        window.addEventListener('mousemove', onMouseMove);
+
+                        function animate() {
+                            requestAnimationFrame(animate);
+                            
+                            group.rotation.y += 0.002;
+                            group.rotation.x += 0.001;
+
+                            // Raycasting for hover effect
+                            raycaster.setFromCamera(mouse, camera);
+                            const intersects = raycaster.intersectObjects(iconMeshes);
+
+                            iconMeshes.forEach(mesh => {
+                                mesh.scale.lerp(new THREE.Vector3(1, 1, 1), 0.1);
+                            });
+
+                            if (intersects.length > 0) {
+                                const firstIntersected = intersects[0].object;
+                                firstIntersected.scale.lerp(new THREE.Vector3(1.3, 1.3, 1.3), 0.1);
+                            }
+
+                            // Make icons always face the camera
+                            iconMeshes.forEach(mesh => {
+                                mesh.lookAt(camera.position);
+                            });
+
+                            renderer.render(scene, camera);
+                        }
+                        animate();
+
+                        window.addEventListener('resize', () => {
+                            camera.aspect = container.clientWidth / container.clientHeight;
+                            camera.updateProjectionMatrix();
+                            renderer.setSize(container.clientWidth, container.clientHeight);
+                        });
+                    }
+                }
+
+                // --- Project Data ---
+                const projects = [
+                    {
+                        title: 'Driver Drowsiness Detection System',
+                        image: 'driver.png',
+                        description: 'A real-time monitoring system that detects driver drowsiness using face and eye tracking. It triggers sound alerts when drowsiness is detected and maintains a log of such events to enhance road safety.',
+                        tags: ['OpenCV', 'Flask', 'dlib','HTML/CSS','SQLite'],
+                        githubLink: 'https://github.com/parshv09/Driver-Drowsiness-Detection-with-real-time-monitoring-and-historical-tracking'
+                    },
+                    {
+                        title: 'Food Waste Reducer',
+                        image: 'food.png',
+                        description: 'A Django-based web application that helps users manage their kitchen inventory and reduce food waste by suggesting recipes based on available ingredients. It sends daily expiry alerts via email and allows users to save their favorite recipes in a dashboard.',
+                        tags: ['Django','HTML/CSS', 'JavaScript', 'MySQL'],
+                        githubLink: 'https://github.com/parshv09/FoodWasteReducer'
+                    },
+                    {
+                        title: 'AI Powered Civic Policy Feedback System',
+                        image: 'civik.png',
+                        description: 'Civic engagement platform using React and Django that allows citizens to provide feedback on government policies with AI-powered sentiment analysis.',
+                        tags: ['Django Rest Framework', 'ReactJS', 'PostgreSQL'],
+                        githubLink: 'https://github.com/parshv09/voice4change'
+                    }
+                ];
+
+                // --- Populate Projects ---
+                const projectGrid = document.getElementById('project-grid');
+                projects.forEach((project, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-slate-800 rounded-md overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-400/10';
+                    card.innerHTML = `
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <i class="ri-folder-4-line text-4xl highlight-text"></i>
+                                <div class="space-x-2">
+                                    <a href="${project.githubLink}" target="_blank" class="text-slate-400 hover:text-cyan-300 transition-colors"><i class="ri-github-fill text-xl"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-100 mb-2 group-hover:text-cyan-300 transition-colors">${project.title}</h3>
+                            <p class="text-slate-400 text-sm mb-4">${project.description.substring(0, 100)}...</p>
+                            <div class="flex flex-wrap gap-2 text-xs text-slate-400">
+                                ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
+                            </div>
+                            <button class="view-details-btn text-sm highlight-text mt-4" data-index="${index}">View Details &rarr;</button>
+                        </div>
+                    `;
+                    projectGrid.appendChild(card);
+                });
+
+                // --- Mobile Menu ---
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const closeMenuButton = document.getElementById('close-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+                
+                function openMenu() { mobileMenu.classList.add('open'); }
+                function closeMenu() { mobileMenu.classList.remove('open'); }
+
+                mobileMenuButton.addEventListener('click', openMenu);
+                closeMenuButton.addEventListener('click', closeMenu);
+                mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+                // --- Scroll Animations ---
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            if (entry.target.id === 'skills') {
+                                animateSkillBars();
+                            }
+                        }
+                    });
+                }, { threshold: 0.1 });
+                document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+                observer.observe(document.getElementById('skills'));
+
+                function animateSkillBars() {
+                    document.querySelectorAll('.skill-item').forEach(item => {
+                        const percentage = item.getAttribute('data-percent');
+                        const bar = item.querySelector('.skill-bar-inner');
+                        bar.style.width = percentage + '%';
                     });
                 }
-            }
 
-            // --- Project Data ---
-            const projects = [
-                {
-                    title: 'Driver Drowsiness Detection System',
-                    image: 'driver.png',
-                    description: '  A real-time monitoring system that detects driver drowsiness using face and eye tracking. It triggers sound alerts when drowsiness is detected and maintains a log of such events to enhance road safety.',
-                    tags: ['OpenCV', 'Flask', 'dlib','HTML/CSS','SQLite'],
-                   
-                    githubLink: 'https://github.com/parshv09/Driver-Drowsiness-Detection-with-real-time-monitoring-and-historical-tracking'
-                },
-                {
-                    title: 'Food Waste Reducer with Recipe Suggestions',
-                    image: 'food.png',
-                    description: 'A Django-based web application that helps users manage their kitchen inventory and reduce food waste by suggesting recipes based on available ingredients. It sends daily expiry alerts via email and allows users to save their favorite recipes in a dashboard.',
-                    tags: ['Django','HTML/CSS', 'JavaScript', 'MySQL'],
-                   
-                    githubLink: 'https://github.com/parshv09/FoodWasteReducer'
-                },
-                {
-                    title: 'AI Powered Civik Policy Feedback System',
-                    image: 'civik.png',
-                    description: 'Civic engagement platform using React and Django that allows citizens to provide feedback on government policies with AI-powered sentiment analysis.',
-                    tags: ['Django Rest Framework', 'ReactJS', 'PostgreSQL'],
-                    
-                    githubLink: 'https://github.com/parshv09/voice4change'
-                }
-            ];
+                // --- Contact Form ---
+                const contactForm = document.getElementById('contact-form');
+                const formStatus = document.getElementById('form-status');
+                
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    formStatus.textContent = 'Sending...';
+                    formStatus.style.color = 'var(--text-slate)';
+                    setTimeout(() => {
+                        formStatus.textContent = 'Message sent successfully!';
+                        formStatus.style.color = 'var(--highlight)';
+                        contactForm.reset();
+                        setTimeout(() => formStatus.textContent = '', 3000);
+                    }, 1000);
+                });
 
-            // --- Populate Projects ---
-            const projectGrid = document.getElementById('project-grid');
-            projects.forEach((project, index) => {
-                const card = document.createElement('div');
-                card.className = 'bg-slate-800 rounded-md overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-400/10';
-                card.innerHTML = `
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <i class="ri-folder-4-line text-4xl highlight-text"></i>
-                            <div class="space-x-2">
-                                <a href="${project.githubLink}" target="_blank" class="text-slate-400 hover:text-cyan-300 transition-colors"><i class="ri-github-fill text-xl"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-100 mb-2 group-hover:text-cyan-300 transition-colors">${project.title}</h3>
-                        <p class="text-slate-400 text-sm mb-4">${project.description.substring(0, 100)}...</p>
-                        <div class="flex flex-wrap gap-2 text-xs text-slate-400">
-                            ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
-                        </div>
-                        <button class="view-details-btn text-sm highlight-text mt-4" data-index="${index}">View Details &rarr;</button>
-                    </div>
-                `;
-                projectGrid.appendChild(card);
-            });
-
-            // --- Mobile Menu ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const closeMenuButton = document.getElementById('close-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-            
-            function openMenu() { mobileMenu.classList.add('open'); }
-            function closeMenu() { mobileMenu.classList.remove('open'); }
-
-            mobileMenuButton.addEventListener('click', openMenu);
-            closeMenuButton.addEventListener('click', closeMenu);
-            mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-            // --- Scroll Animations ---
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        if (entry.target.id === 'skills') {
-                            animateSkillBars();
-                        }
+                // --- Scroll to Top Button ---
+                const scrollToTopBtn = document.getElementById('scroll-to-top');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        scrollToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+                    } else {
+                        scrollToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
                     }
                 });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-            observer.observe(document.getElementById('skills'));
-
-            function animateSkillBars() {
-                document.querySelectorAll('.skill-item').forEach(item => {
-                    const percentage = item.getAttribute('data-percent');
-                    const bar = item.querySelector('.skill-bar-inner');
-                    bar.style.width = percentage + '%';
+                scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+                
+                // --- Project Modal ---
+                const modal = document.getElementById('project-modal');
+                const modalContent = document.getElementById('modal-content');
+                const closeModalBtn = document.getElementById('close-modal-button');
+                
+                document.querySelectorAll('.view-details-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const project = projects[btn.dataset.index];
+                        document.getElementById('modal-image').src = `https://placehold.co/600x400/0a192f/64ffda?text=${encodeURIComponent(project.title)}`;
+                        document.getElementById('modal-title').textContent = project.title;
+                        document.getElementById('modal-description').textContent = project.description;
+                        
+                        const tagsContainer = document.getElementById('modal-tags');
+                        tagsContainer.innerHTML = project.tags.map(tag => `<span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">${tag}</span>`).join('');
+                        
+                        const linksContainer = document.getElementById('modal-links');
+                        linksContainer.innerHTML = `
+                            <a href="${project.githubLink}" target="_blank" class="px-4 py-2 border border-cyan-300 text-cyan-300 rounded-md hover:bg-cyan-300/10 transition-colors">View Code</a>
+                        `;
+                        
+                        modal.classList.remove('opacity-0', 'invisible');
+                        modalContent.classList.remove('scale-95');
+                    });
                 });
-            }
 
-            // --- Contact Form ---
-            const contactForm = document.getElementById('contact-form');
-            const formStatus = document.getElementById('form-status');
-            
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                formStatus.textContent = 'Sending...';
-                formStatus.style.color = 'var(--text-slate)';
-                setTimeout(() => {
-                    formStatus.textContent = 'Message sent successfully!';
-                    formStatus.style.color = 'var(--highlight)';
-                    contactForm.reset();
-                    setTimeout(() => formStatus.textContent = '', 3000);
-                }, 1000);
-            });
-
-            // --- Scroll to Top Button ---
-            const scrollToTopBtn = document.getElementById('scroll-to-top');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    scrollToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
-                } else {
-                    scrollToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+                function closeModal() {
+                    modal.classList.add('opacity-0', 'invisible');
+                    modalContent.classList.add('scale-95');
                 }
-            });
-            scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-            
-            // --- Project Modal ---
-            const modal = document.getElementById('project-modal');
-            const modalContent = document.getElementById('modal-content');
-            const closeModalBtn = document.getElementById('close-modal-button');
-            
-            document.querySelectorAll('.view-details-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const project = projects[btn.dataset.index];
-                    document.getElementById('modal-image').src = project.image;
-                    document.getElementById('modal-title').textContent = project.title;
-                    document.getElementById('modal-description').textContent = project.description;
-                    
-                    const tagsContainer = document.getElementById('modal-tags');
-                    tagsContainer.innerHTML = project.tags.map(tag => `<span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">${tag}</span>`).join('');
-                    
-                    const linksContainer = document.getElementById('modal-links');
-                    linksContainer.innerHTML = `
-                       
-                        <a href="${project.githubLink}" target="_blank" class="px-4 py-2 border border-cyan-300 text-cyan-300 rounded-md hover:bg-cyan-300/10 transition-colors">View Code</a>
-                    `;
-                    
-                    modal.classList.remove('opacity-0', 'invisible');
-                    modalContent.classList.remove('scale-95');
+
+                closeModalBtn.addEventListener('click', closeModal);
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal();
                 });
             });
-
-            function closeModal() {
-                modal.classList.add('opacity-0', 'invisible');
-                modalContent.classList.add('scale-95');
-            }
-
-            closeModalBtn.addEventListener('click', closeModal);
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeModal();
-            });
-        });
-    </script>
-</body>
-</html>
+        </script>
+    </body>
+    </html>
