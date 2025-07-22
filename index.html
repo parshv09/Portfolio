@@ -8,89 +8,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css" rel="stylesheet">
+    <script src="scripts.js"></script>
 
-    <style>
-        :root {
-            --bg-dark: #0a192f;
-            --text-light: #ccd6f6;
-            --text-slate: #8892b0;
-            --highlight: #64ffda;
-            --highlight-tint: rgba(100, 255, 218, 0.1);
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            overflow-x: hidden; /* Prevent horizontal scroll */
-        }
-        .highlight-text {
-            color: var(--highlight);
-        }
-        .section-heading {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: clamp(1.5rem, 5vw, 2rem); /* Responsive font size */
-            font-weight: 600;
-            color: var(--text-light);
-            margin-bottom: 2.5rem;
-            width: 100%;
-        }
-        .section-heading span {
-            white-space: nowrap;
-        }
-        .section-heading::after {
-            content: '';
-            display: block;
-            position: relative;
-            top: 2px;
-            width: 100%; /* Changed from fixed width */
-            height: 1px;
-            background-color: #233554;
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Skill bar animation */
-        .skill-bar-inner {
-            height: 100%;
-            background-color: var(--highlight);
-            border-radius: 0.25rem;
-            transition: width 1.5s ease-in-out;
-            width: 0;
-        }
-        
-        /* Project Modal & Mobile Menu Transitions */
-        #project-modal, #mobile-menu {
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-        }
-        #mobile-menu.open {
-            visibility: visible;
-            opacity: 1;
-        }
-        
-        #hero-3d-container canvas {
-            width: 100% !important;
-            height: 100% !important;
-            cursor: grab;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;  /* Chrome, Safari, and Opera */
-        }
-    </style>
 </head>
 <body class="antialiased">
 
@@ -135,7 +55,7 @@
                         "I am a passionate and curious developer who loves building impactful, real-world projects. I enjoy turning ideas into digital solutions and continuously learning new technologies along the way."
                     </p>
                     <div class="mt-8 flex gap-4 flex-wrap justify-center md:justify-start">
-                        <a href="#" target="_blank" class="px-6 py-3 border border-cyan-300 text-cyan-300 rounded-md hover:bg-cyan-300/10 transition-colors">View Resume</a>
+                        <a href="https://drive.google.com/file/d/1DupSRaNGGgoxTjhOwdfblQy_aim-r8BL/view?usp=sharing " target="_blank" class="px-6 py-3 border border-cyan-300 text-cyan-300 rounded-md hover:bg-cyan-300/10 transition-colors">View Resume</a>
                         <a href="#contact" class="px-6 py-3 bg-cyan-400 text-slate-900 font-semibold rounded-md hover:bg-cyan-300 transition-colors">Contact Me</a>
                     </div>
                 </div>
@@ -162,7 +82,7 @@
                 <div class="md:col-span-2 flex justify-center items-start">
                     <div class="relative w-64 h-64 group">
                         <div class="absolute inset-0 bg-cyan-400 rounded-md transform -rotate-3 group-hover:rotate-0 transition-transform duration-300"></div>
-                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQFgWj2klKbAhQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729779732871?e=1755734400&v=beta&t=h7trhQ0-zgZaIJMp6MIqeaLSnqfiGaTtoEhnbgMDsos" alt="Parshv Athane" class="relative w-full h-full object-contain rounded-md bg-slate-900/50">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQFgWj2klKbAhQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729779732871?e=1755734400&v=beta&t=h7trhQ0-zgZaIJMp6MIqeaLSnqfiGaTtoEhnbgMDsos" alt="Parshv Athane" class="relative w-full h-full object-cover rounded-md">
                     </div>
                 </div>
             </section>
@@ -282,7 +202,7 @@
             </section>
 
             <!-- Projects Section -->
-            <section id="projects" class="py-24">
+             <section id="projects" class="py-24">
                 <h2 class="section-heading fade-in"><span class="inline-block border-b-4 border-[#64ffda] pb-1">My Projects</span></h2>
                 <div id="project-grid" class="fade-in grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Project cards will be injected here by JS -->
@@ -295,17 +215,17 @@
                 <div class="fade-in max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Testimonial Card 1 -->
                     <div class="bg-slate-800 rounded-lg p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-400/10">
-                        <img src="https://placehold.co/80x80/1e293b/ffffff?text=S" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Senior Developer">
-                        <p class="text-slate-300 my-4">"Working with Parshv was a fantastic experience. Their dedication to writing clean, efficient code is remarkable. A true team player with excellent problem-solving skills."</p>
-                        <h4 class="font-semibold text-gray-100 mt-6">Senior Developer</h4>
-                        <p class="text-sm text-slate-400">Lead at Tech Corp</p>
+                        <img src="https://media.licdn.com/dms/image/v2/C4E03AQGQamoIu7Raxw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1650984918437?e=1756339200&v=beta&t=KeuRnYJfVcVGt3JdfExp1wnMg_nxn-xiJLF_VP8tvXE" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Senior Developer">
+                        <p class="text-slate-300 my-4">"Parshv was a focused and curious learner throughout the internship. He took every task seriously and always tried to give his best. His interest in backend development and willingness to improve was clearly visible. I enjoyed mentoring him and I’m sure he will continue to grow and do well in his career."</p>
+                        <h4 class="font-semibold text-gray-100 mt-6">Mr. Shailesh Dinde</h4>
+                        <p class="text-sm text-slate-400">QA Automation Lead at Aiotlogy Services pvt ltd, Bengaluru</p>
                     </div>
                     <!-- Testimonial Card 2 -->
                     <div class="bg-slate-800 rounded-lg p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-400/10">
-                        <img src="https://placehold.co/80x80/1e293b/ffffff?text=P" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Professor">
-                        <p class="text-slate-300 my-4">"Parshv has a great grasp of backend concepts and was instrumental in our final year project. Always eager to learn and contribute."</p>
-                        <h4 class="font-semibold text-gray-100 mt-6">Professor Jane Doe</h4>
-                        <p class="text-sm text-slate-400">Computer Science Dept.</p>
+                        <img src="https://i.postimg.cc/66MVktgz/rasalsir.jpg" class="w-20 h-20 rounded-full mx-auto mb-4" alt="Professor">
+                        <p class="text-slate-300 my-4">"Parshv is a dedicated and responsible student. He completes his tasks with sincerity and always shows interest in learning beyond the classroom. His calm nature and focused approach make him stand out. I believe he will keep growing in his journey and do well in the tech field."</p>
+                        <h4 class="font-semibold text-gray-100 mt-6">Mr. Shubham Rasal</h4>
+                        <p class="text-sm text-slate-400">Lecturer, DKTE's YCP.</p>
                     </div>
                 </div>
             </section>
@@ -316,7 +236,7 @@
                     <h2 class="text-2xl font-semibold highlight-text">What's Next?</h2>
                     <h3 class="text-4xl md:text-5xl font-bold text-gray-100 mt-2 mb-4">Get In Touch</h3>
                     <p class="text-slate-400 mb-8">My inbox is always open. Whether you have a question, a project proposal, or just want to say hi, I’ll get back to you!</p>
-                    <form id="contact-form" class="space-y-4 text-left">
+                    <form id="contact-form" action="https://formspree.io/f/xrblppav" method="POST" class="space-y-4 text-left">
                         <input type="text" id="name" name="name" placeholder="Your Name" class="w-full bg-slate-800 border border-slate-700 rounded-md p-3 focus:border-cyan-400 focus:outline-none transition-colors" required>
                         <input type="email" id="email" name="email" placeholder="Your Email" class="w-full bg-slate-800 border border-slate-700 rounded-md p-3 focus:border-cyan-400 focus:outline-none transition-colors" required>
                         <div>
@@ -353,7 +273,7 @@
                 <div class="flex justify-center space-x-6 mb-4">
                     <a href="https://github.com/parshv09" class="hover:text-cyan-300 transition-colors"><i class="ri-github-fill text-xl"></i></a>
                     <a href="https://www.linkedin.com/in/parshv-athane-980982267/" class="hover:text-cyan-300 transition-colors"><i class="ri-linkedin-box-fill text-xl"></i></a>
-                    <a href="#" class="hover:text-cyan-300 transition-colors"><i class="ri-twitter-x-fill text-xl"></i></a>
+                    <a href="https://www.instagram.com/parshv_athane_09" class="hover:text-cyan-300 transition-colors"><i class="ri-instagram-x-fill text-xl"></i></a>
                 </div>
                 <p class="text-sm">Designed & Built by Parshv Athane</p>
                 <p class="text-xs mt-1">&copy; 2025 All Rights Reserved.</p>
@@ -367,9 +287,9 @@
         
         <!-- Project Modal -->
         <div id="project-modal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 opacity-0 invisible">
-            <div id="modal-content" class="bg-slate-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative transform scale-95 transition-transform duration-300 scrollbar-hide">
+           <div id="modal-content" class="bg-slate-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative transform scale-95 transition-transform duration-300 hide-scrollbar">
                 <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="ri-close-line text-2xl"></i></button>
-                <img id="modal-image" src="" alt="Project Image" class="w-full h-auto rounded-md mb-4">
+                <img id="modal-image" src="" alt="Project Image" class="w-full h-64 object-cover rounded-md mb-4">
                 <h3 id="modal-title" class="text-2xl font-bold text-white mb-2"></h3>
                 <div id="modal-tags" class="flex flex-wrap gap-2 mb-4"></div>
                 <p class="text-slate-300 font-semibold mb-2">Description</p>
@@ -377,266 +297,5 @@
                 <div id="modal-links" class="flex gap-4"></div>
             </div>
         </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // --- 3D Hero Animation ---
-                if (window.THREE) {
-                    const container = document.getElementById('hero-3d-container');
-                    if (container) {
-                        const scene = new THREE.Scene();
-                        const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-                        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-                        renderer.setSize(container.clientWidth, container.clientHeight);
-                        container.appendChild(renderer.domElement);
-
-                        const group = new THREE.Group();
-                        scene.add(group);
-
-                        const loader = new THREE.TextureLoader();
-                        const icons = [
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-                           'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg',
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-                            'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg'
-                        ];
-
-                        const radius = 2.5;
-                        const iconMeshes = [];
-
-                        icons.forEach((url, i) => {
-                            loader.load(url, (texture) => {
-                                const material = new THREE.MeshStandardMaterial({
-                                    map: texture,
-                                    transparent: true,
-                                    roughness: 0.8,
-                                    metalness: 0.1
-                                });
-                                const geometry = new THREE.PlaneGeometry(0.8, 0.8);
-                                const mesh = new THREE.Mesh(geometry, material);
-                                
-                                const phi = Math.acos(-1 + (2 * i) / (icons.length -1));
-                                const theta = Math.sqrt(icons.length * Math.PI) * phi;
-                                
-                                mesh.position.setFromSphericalCoords(radius, phi, theta);
-                                mesh.lookAt(camera.position);
-
-                                group.add(mesh);
-                                iconMeshes.push(mesh);
-                            });
-                        });
-
-                        // --- Lighting ---
-                        const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
-                        scene.add(ambientLight);
-                        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-                        directionalLight.position.set(5, 5, 10);
-                        scene.add(directionalLight);
-                        
-                        camera.position.z = 6;
-
-                        // --- Animation & Interaction ---
-                        const raycaster = new THREE.Raycaster();
-                        const mouse = new THREE.Vector2();
-                        let intersected;
-
-                        function onMouseMove(event) {
-                            const rect = renderer.domElement.getBoundingClientRect();
-                            mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-                            mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-                        }
-                        
-                        window.addEventListener('mousemove', onMouseMove);
-
-                        function animate() {
-                            requestAnimationFrame(animate);
-                            
-                            group.rotation.y += 0.002;
-                            group.rotation.x += 0.001;
-
-                            // Raycasting for hover effect
-                            raycaster.setFromCamera(mouse, camera);
-                            const intersects = raycaster.intersectObjects(iconMeshes);
-
-                            iconMeshes.forEach(mesh => {
-                                mesh.scale.lerp(new THREE.Vector3(1, 1, 1), 0.1);
-                            });
-
-                            if (intersects.length > 0) {
-                                const firstIntersected = intersects[0].object;
-                                firstIntersected.scale.lerp(new THREE.Vector3(1.3, 1.3, 1.3), 0.1);
-                            }
-
-                            // Make icons always face the camera
-                            iconMeshes.forEach(mesh => {
-                                mesh.lookAt(camera.position);
-                            });
-
-                            renderer.render(scene, camera);
-                        }
-                        animate();
-
-                        window.addEventListener('resize', () => {
-                            camera.aspect = container.clientWidth / container.clientHeight;
-                            camera.updateProjectionMatrix();
-                            renderer.setSize(container.clientWidth, container.clientHeight);
-                        });
-                    }
-                }
-
-                // --- Project Data ---
-                const projects = [
-                    {
-                        title: 'Driver Drowsiness Detection System',
-                        image: 'https://i.postimg.cc/qvVHXMQG/driver.png',
-                        description: 'A real-time monitoring system that detects driver drowsiness using face and eye tracking. It triggers sound alerts when drowsiness is detected and maintains a log of such events to enhance road safety.',
-                        tags: ['OpenCV', 'Flask', 'dlib','HTML/CSS','SQLite'],
-                        githubLink: 'https://github.com/parshv09/Driver-Drowsiness-Detection-with-real-time-monitoring-and-historical-tracking'
-                    },
-                    {
-                        title: 'Food Waste Reducer',
-                        image: 'https://i.postimg.cc/t43QrQMG/food.png',
-                        description: 'A Django-based web application that helps users manage their kitchen inventory and reduce food waste by suggesting recipes based on available ingredients. It sends daily expiry alerts via email and allows users to save their favorite recipes in a dashboard.',
-                        tags: ['Django','HTML/CSS', 'JavaScript', 'MySQL'],
-                        githubLink: 'https://github.com/parshv09/FoodWasteReducer'
-                    },
-                    {
-                        title: 'AI Powered Civic Policy Feedback System',
-                        image: 'https://i.postimg.cc/mrS4rfYy/civik.png',
-                        description: 'Civic engagement platform using React and Django that allows citizens to provide feedback on government policies with AI-powered sentiment analysis.',
-                        tags: ['Django Rest Framework', 'ReactJS', 'PostgreSQL'],
-                        githubLink: 'https://github.com/parshv09/voice4change'
-                    }
-                ];
-
-                // --- Populate Projects ---
-                const projectGrid = document.getElementById('project-grid');
-                projects.forEach((project, index) => {
-                    const card = document.createElement('div');
-                    card.className = 'bg-slate-800 rounded-md overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-400/10';
-                    card.innerHTML = `
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-4">
-                                <i class="ri-folder-4-line text-4xl highlight-text"></i>
-                                <div class="space-x-2">
-                                    <a href="${project.githubLink}" target="_blank" class="text-slate-400 hover:text-cyan-300 transition-colors"><i class="ri-github-fill text-xl"></i></a>
-                                </div>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-100 mb-2 group-hover:text-cyan-300 transition-colors">${project.title}</h3>
-                            <p class="text-slate-400 text-sm mb-4">${project.description.substring(0, 100)}...</p>
-                            <div class="flex flex-wrap gap-2 text-xs text-slate-400">
-                                ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
-                            </div>
-                            <button class="view-details-btn text-sm highlight-text mt-4" data-index="${index}">View Details &rarr;</button>
-                        </div>
-                    `;
-                    projectGrid.appendChild(card);
-                });
-
-                // --- Mobile Menu ---
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const closeMenuButton = document.getElementById('close-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-                const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-                
-                function openMenu() { mobileMenu.classList.add('open'); }
-                function closeMenu() { mobileMenu.classList.remove('open'); }
-
-                mobileMenuButton.addEventListener('click', openMenu);
-                closeMenuButton.addEventListener('click', closeMenu);
-                mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-                // --- Scroll Animations ---
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            if (entry.target.id === 'skills') {
-                                animateSkillBars();
-                            }
-                        }
-                    });
-                }, { threshold: 0.1 });
-                document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-                observer.observe(document.getElementById('skills'));
-
-                function animateSkillBars() {
-                    document.querySelectorAll('.skill-item').forEach(item => {
-                        const percentage = item.getAttribute('data-percent');
-                        const bar = item.querySelector('.skill-bar-inner');
-                        bar.style.width = percentage + '%';
-                    });
-                }
-
-                // --- Contact Form ---
-                const contactForm = document.getElementById('contact-form');
-                const formStatus = document.getElementById('form-status');
-                
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    formStatus.textContent = 'Sending...';
-                    formStatus.style.color = 'var(--text-slate)';
-                    setTimeout(() => {
-                        formStatus.textContent = 'Message sent successfully!';
-                        formStatus.style.color = 'var(--highlight)';
-                        contactForm.reset();
-                        setTimeout(() => formStatus.textContent = '', 3000);
-                    }, 1000);
-                });
-
-                // --- Scroll to Top Button ---
-                const scrollToTopBtn = document.getElementById('scroll-to-top');
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 300) {
-                        scrollToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
-                    } else {
-                        scrollToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
-                    }
-                });
-                scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-                
-                // --- Project Modal ---
-                const modal = document.getElementById('project-modal');
-                const modalContent = document.getElementById('modal-content');
-                const closeModalBtn = document.getElementById('close-modal-button');
-                
-                document.querySelectorAll('.view-details-btn').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const project = projects[btn.dataset.index];
-                        document.getElementById('modal-image').src = project.image;
-                        document.getElementById('modal-title').textContent = project.title;
-                        document.getElementById('modal-description').textContent = project.description;
-                        
-                        const tagsContainer = document.getElementById('modal-tags');
-                        tagsContainer.innerHTML = project.tags.map(tag => `<span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">${tag}</span>`).join('');
-                        
-                        const linksContainer = document.getElementById('modal-links');
-                        linksContainer.innerHTML = `
-                            <a href="${project.githubLink}" target="_blank" class="px-4 py-2 border border-cyan-300 text-cyan-300 rounded-md hover:bg-cyan-300/10 transition-colors">View Code</a>
-                        `;
-                        
-                        modal.classList.remove('opacity-0', 'invisible');
-                        modalContent.classList.remove('scale-95');
-                    });
-                });
-
-                function closeModal() {
-                    modal.classList.add('opacity-0', 'invisible');
-                    modalContent.classList.add('scale-95');
-                }
-
-                closeModalBtn.addEventListener('click', closeModal);
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) closeModal();
-                });
-            });
-        </script>
     </body>
     </html>

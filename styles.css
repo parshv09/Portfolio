@@ -1,0 +1,80 @@
+  :root {
+            --bg-dark: #0a192f;
+            --text-light: #ccd6f6;
+            --text-slate: #8892b0;
+            --highlight: #64ffda;
+            --highlight-tint: rgba(100, 255, 218, 0.1);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .highlight-text {
+            color: var(--highlight);
+        }
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: clamp(1.5rem, 5vw, 2rem); /* Responsive font size */
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            width: 100%;
+        }
+        .section-heading span {
+            white-space: nowrap;
+        }
+        .section-heading::after {
+            content: '';
+            display: block;
+            position: relative;
+            top: 2px;
+            width: 100%; /* Changed from fixed width */
+            height: 1px;
+            background-color: #233554;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Skill bar animation */
+        .skill-bar-inner {
+            height: 100%;
+            background-color: var(--highlight);
+            border-radius: 0.25rem;
+            transition: width 1.5s ease-in-out;
+            width: 0;
+        }
+        
+        /* Project Modal & Mobile Menu Transitions */
+        #project-modal, #mobile-menu {
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        #mobile-menu.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        #hero-3d-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+            cursor: grab;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;  /* Chrome, Safari, and Opera */
+        }
